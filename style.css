@@ -172,3 +172,45 @@ cursor: pointer;
 .pannel-all{
     height: 20px;
 }
+
+/* Designing Hero section of our Web Page */
+.hero-section {
+    position: relative;
+    overflow: hidden; /* hides the images that aren't currently visible */
+}
+/* CSS Animation for Scrolling */
+@keyframes slide-animation {
+    0% { transform: translateX(0); }
+    30% { transform: translateX(0); }
+    40% { transform: translateX(-100vw); }
+    60% { transform: translateX(-100vw); }
+    70% { transform: translateX(-200vw); }
+    100% { transform: translateX(-200vw); }
+}
+
+.hero-slider {
+    display: flex; /* images comes side by side in row form i.e one after another like train*/
+    width: 300%; 
+    animation: slide-animation 15s infinite; /* scroll automatically after 15s */
+}
+/* For each individual image */
+.hero-img {
+    width: 100vw; /* Each image takes full screen width */
+    height: 500px;
+    object-fit: cover;
+    /* Amazon Gradient Fade Effect At bottom of the image*/
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+/* Since on HTML file, we used Hero images ,so naturally our Hero mess div will go at bottom of the page after hero images, */
+/* if we used background img ,then we need to set this mess div using position */
+.hero-msg{
+    background-color: white;
+    height: 50px;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+}
+.hero-msg a{
+    color: #007185;
+    text-decoration: none;
+}
