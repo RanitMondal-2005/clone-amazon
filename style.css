@@ -195,22 +195,112 @@ cursor: pointer;
 }
 /* For each individual image */
 .hero-img {
-    width: 100vw; /* Each image takes full screen width */
-    height: 500px;
+    width: 100vw; 
+    height: 600px; 
     object-fit: cover;
-    /* Amazon Gradient Fade Effect At bottom of the image*/
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    /* Fade Effect at bottom */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
 }
 /* Since on HTML file, we used Hero images ,so naturally our Hero mess div will go at bottom of the page after hero images, */
 /* if we used background img ,then we need to set this mess div using position */
-.hero-msg{
+.hero-msg {
     background-color: white;
-    height: 50px;
-    font-size: 0.85rem;
+    color: black;
+    height: 40px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    font-size: 0.85rem;
+    /* put it at the bottom of the image area */
+    position: absolute;
+    bottom: 220px; 
+    left: 20px;
+    right: 20px;
+    z-index: 10; /* Keeps it above everything */
 }
 .hero-msg a{
     color: #007185;
     text-decoration: none;
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;   /* Since we only want maximum 4 boxes in 1 row, box 5 will st from another row */
+    justify-content: space-evenly;
+    /* LOGIC : The Image(of hero section) is fading out (becoming transparent).
+               The Shop Section is fading in (becoming solid gray).
+       Result: They "cross-fade" into each other perfectly. */
+    background: linear-gradient(to bottom, transparent, #e2e7e6 20%);
+    /* here to bottom means color fading : Starts at Top then moves to bottom */
+    /* transparent is our start point then moving to grey colour(end point) */
+    margin-top: -240px; 
+    /* NEGATIVE MARGIN LOGIC:
+        Think of the Hero Image as a tall wall. 
+        Normally, the Shop Section starts at the foot of that wall.
+        The negative margin acts like a 'hook' that pulls this entire section 
+        UPWARDS so it sits on top of the image instead of below it.
+    */ 
+    position: relative;
+    /* z index is for controlling overlapping elements */
+    z-index: 1; /* Keeps the boxes on top of the image fade */
+    padding: 20px 0;
+}
+
+.box {
+    height: 400px;
+    width: 23%; /* Four boxes (approx 25% each) */
+    background-color: white;
+    padding: 20px 15px;
+    margin-top: 20px;
+}
+
+.box-img {
+    height: 300px;
+    background-size: cover; /* image should fills the square without stretching */
+    background-position: center;
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+}
+
+.box h1 {
+    font-size: 1.25rem; 
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #007185;       
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.box p:hover {
+    color: #C7511F;   
+    text-decoration: underline;
+}
+
+/* Login Recommendation */
+.login-recommend{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-recommend button{
+    background-color: rgb(255, 225, 0);
+    height: 30px;
+    width: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.login-recommend p{
+    font-size: small;
+}
+.login-recommend a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #007185;
+    font-size: small;
 }
