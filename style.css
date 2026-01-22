@@ -1,0 +1,151 @@
+*{
+    margin: 0px; /* so that no extra space btw two contents */
+    font-family: Arial;
+    box-sizing:border-box;/* so that our box dont grow unexpectedly when padding & border added */
+}
+/* Designing Navigation Bar */
+.navbar{
+    height:68px;
+    background-color: #0f1111;
+    background-size: contain;
+    color: white;
+    display: flex;  /* So that all box inside Nav Bar comes side by side in a row */ 
+    justify-content: space-evenly;
+    align-items: center; /* centre along y axis */
+}
+/* box 1 : Navigation Logo */
+.nav-logo{
+    height: 65px;
+    width: 165px;
+}
+.logo{
+    height:60px;
+    background-image: url("logo.jpeg");
+    background-size: cover;
+}
+/* This Border and Hover Border will help us to create the invisible White Border for all Boxes */
+.border{
+    border: 0.5px solid transparent;
+}
+.border:hover{
+    border: 0.5px solid white;
+    cursor: pointer; /* HAND ICON i.e, It tells the user: "This is clickable." */
+}
+/* box 2 : Address Icon */
+.address-icon{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+
+
+}
+.add-first{
+    color: #cccccc;
+    font-size: 1rem;   /* rem means font size is adjusted to the root's size */
+    margin-left: 15px;
+}
+.add-second{
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin-left: 3px;
+}
+/* box 3 : Search Bar */
+.nav-search{
+    display: flex;
+    width: 620px;
+    height: 40px;
+    border-radius: 3px;
+    margin:15px;
+    justify-content: space-evenly;
+}
+.nav-search:hover{
+    border: 2px solid #febd69;
+}
+.search-search{
+    background-color: #f3f3f3;
+    /* Dont Fixed the Width  here,then our bigger options text will get cut off the screen */
+    padding: 0 10px; /* Adds 10px space on the left and right */
+    height: 100%;    /* Fills the search bar height */
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none; /* put border none here and on the search input as border none ,so that their border merges together and looks as a single search bar */
+    outline: none; /* Removes the border when you click it */
+    cursor: pointer;
+}
+.search-input{
+    /* flex-grow: 1-This tells the input field to "Take up all the space that is left over after the dropdown and the icon" */
+    flex-grow: 1; /* Best way to occupy remaining space */
+    font-size: 1rem;
+    border: none;
+    outline: none; /* Removes the blue highlight when clicking */
+}
+.search-icon{
+    background-color: #febd69;;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;    /* Matches your search bar curve */
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+/* box 4 : Language & Flag */
+.nav-language{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-left: 10px;
+    padding: 10px;
+   
+}
+
+.india-flag {
+    width: 20px; /* Small flag size */
+    margin-right: 5px;  /* to put space btw the Flag and our Text ("IN")*/
+    display: block;
+}
+
+.lang-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 3px; /* Fine-tuning the vertical alignment */
+}
+/* box 5 : Accounts & Sign-in */
+.nav-signing{
+    height: 50px;
+    cursor: pointer;
+    display: flex;          /* Use Flexbox to stack text vertically */
+    flex-direction: column; 
+    justify-content: center;
+
+}
+.nav-signing-1st{
+font-size: 0.7rem;
+}
+.text-box{
+font-size: 0.85rem;
+font-weight: 700; /* To look like bold */
+cursor: pointer;
+}
+/* box 6: Returns & Orders */
+.returns {
+    height: 50px;
+    display: flex;          
+    flex-direction: column; 
+    justify-content: center; 
+
+}
+/* Box 7: Shopping & cart */
+.nav-cart{
+    margin-left: 15px;
+     /* display: flex;          
+    flex-direction: column; 
+    justify-content: center;  */
+}
+.nav-cart i{
+    font-size: 30px;
+    height: 30px;
+
+}
