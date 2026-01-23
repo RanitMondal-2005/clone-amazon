@@ -18,7 +18,7 @@
     height: 65px;
     width: 165px;
 }
-.logo{
+.n-logo{
     height:60px;
     background-image: url("logo.jpeg");
     background-size: cover;
@@ -289,7 +289,9 @@ cursor: pointer;
     align-items: center;
 }
 .login-recommend button{
-    background-color: rgb(255, 225, 0);
+    margin-top: 10px;
+    background-color: rgb(255, 215, 0);
+    border: 2px transparent;
     height: 30px;
     width: 150px;
     border-radius: 50px;
@@ -303,4 +305,82 @@ cursor: pointer;
     text-decoration: none;
     color: #007185;
     font-size: small;
+}
+hr{
+    margin-bottom: 20px;
+}
+
+/* Footer Part */
+/* Part 1  */
+.foot-panel1{
+    background-color: #374758;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+/* Part 2 */
+.foot-panel2{
+    padding: 50px;
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    height: 450px;
+    
+}
+.foot-panel2 ul a{
+    margin-top: 20px;
+    display: block;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #dddddd;
+    font-weight: 300;
+    
+}
+.foot-panel2 ul a:hover{
+    text-decoration: underline;
+}
+/* Part 3 */
+.foot-panel3{
+    background-color: #222f3d;
+    color: #dddddd;
+    border-top: 0.5px solid white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo{
+    margin-top: 20px;
+    background-image: url("logo.jpeg");
+    background-size: cover;
+    height: 65px;
+    width: 180px;
+    margin-bottom: 20px;
+}
+.foot-panel4{
+    background-color: #0f1111;
+    color: white;
+    height: 80px;
+}
+.pages{
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 25px;
+    margin: 0.1px;
+}
+.pages a:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.copyright{
+    padding-top:5px;
+    font-size: 0.7rem;
+    text-align: center;
 }
